@@ -2,7 +2,7 @@
   "name": "ecell",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://meet-korat.github.io/Ecell/",
+  "homepage": "https://meet-korat.github.io/ECell/",
   "type": "module",
   "scripts": {
     "dev": "vite",
