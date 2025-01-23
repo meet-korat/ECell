@@ -30,11 +30,7 @@ export const First = () => {
         }}
          className='text-white h-[350px] w-[350px]  rounded-2xl bg-gradient-to-br from-[#3300FF] to-[#FA00FF]'></div>
         <div className='text-white bg-gray-100 overflow-hidden h-[350px] w-[350px] rounded-2xl border border-gray-900 '>
-<<<<<<< HEAD
             <img className='object-contain w-full h-full' src="/image/logo.png" alt="E cell logo" />
-=======
-            <img className='object-contain w-full h-full' src="src\image\logo.png" alt="E-cell logo" />
->>>>>>> 45064accb32cf931630b0354dbbadef9c3b86e65
         </div>
         <div className='text-white shadow-inner grid grid-cols-3 grid-rows-3 p-7 gap-1.5 bg-[#d9d9d9] h-[350px] w-[350px] rounded-2xl'
         style={{
@@ -141,7 +137,7 @@ export const First = () => {
                               updatedColors[index] = "#00477A"; // Reset color to blue
                               return updatedColors;
                             });
-                          }, i*400);
+                          }, i*200);
                     })
                 }
             }
