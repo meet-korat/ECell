@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 import { Navbar } from '../components/Navbar'
+import {useMediaQuery} from 'react-responsive';
+
 export const First = () => {
     const [color,setColor]=useState(new Array(8).fill('#00477A'));
     const [array,setArray]=useState([]);
+
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+    const isTablet = useMediaQuery({ query: '(min-width: 601px) and (max-width: 1024px)' });
+    
+  
 
   return (
 
@@ -10,12 +17,26 @@ export const First = () => {
     <>
     <Navbar/>
 
-    <div className=' flex justify-center flex-wrap mt-11  gap-[1.5vw]  '>
-        <div className='text-white h-[350px] w-[350px]  rounded-2xl bg-gradient-to-br from-[#3300FF] to-[#FA00FF]'></div>
+    <div style={{
+        flexDirection:isMobile? 'column-reverse' :'row', 
+        marginLeft:isMobile ? '13%' : '0',
+        gap:isMobile ? '2vh' : '1.5vw'
+    
+        }}
+     className=' flex justify-center flex-wrap mt-11  gap-[1.5vw]  '>
+
+        <div style={{
+            width : isTablet?'700px':'350px',
+        }}
+         className='text-white h-[350px] w-[350px]  rounded-2xl bg-gradient-to-br from-[#3300FF] to-[#FA00FF]'></div>
         <div className='text-white bg-gray-100 overflow-hidden h-[350px] w-[350px] rounded-2xl border border-gray-900 '>
             <img className='object-contain w-full h-full' src="src\image\logo.png" alt="logo" />
         </div>
-        <div className='text-white grid grid-cols-3 grid-rows-3 p-7 gap-1.5 bg-[#d9d9d9] h-[350px] w-[350px] rounded-2xl' flex flex-wrap>
+        <div className='text-white shadow-inner grid grid-cols-3 grid-rows-3 p-7 gap-1.5 bg-[#d9d9d9] h-[350px] w-[350px] rounded-2xl'
+        style={{
+            boxShadow: 'inset 0px 0px 10px rgba(0, 0, 0, 0.5)',
+          }}
+        flex flex-wrap>
             <div onClick={
                 ()=>{
                     if(color[0]==='#00477A'){
@@ -126,7 +147,6 @@ export const First = () => {
             
         </div>
         
-
     </div>
     </>
     
